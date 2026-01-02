@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name</title>
+  <style>
+    :root {
+      --bg: #0f1b16;
+      --card: #162823;
+      --accent-1: #2f6f4f;
+      --accent-2: #b01b6b;
+      --accent-3: #c45a1a;
+      --text: #f2f5f4;
+      --muted: #c4d0cb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #1c332b 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 32px 16px;
+    }
+
+    .container {
+      width: min(900px, 100%);
+      background: var(--card);
+      border-radius: 24px;
+      padding: clamp(24px, 5vw, 48px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: 1px;
+      color: var(--text);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-1), var(--accent-2), var(--accent-3));
+      border-radius: 999px;
+      margin: 28px 0;
+    }
+
+    section {
+      display: grid;
+      gap: 16px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: var(--text);
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    li {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 12px;
+      padding: 12px 16px;
+      border-left: 4px solid var(--accent-2);
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    li:nth-child(2n) {
+      border-left-color: var(--accent-1);
+    }
+
+    li:nth-child(3n) {
+      border-left-color: var(--accent-3);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 24px 12px;
+      }
+
+      .container {
+        padding: 24px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Your Name</h1>
+      <p class="subtitle">
+        I am a curious creator who loves building thoughtful experiences, exploring new ideas,
+        and learning something new every day. I enjoy blending creativity with technology and
+        bringing fresh energy to everything I do.
+      </p>
+    </header>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <section>
+      <h2>Favorite Hobbies</h2>
+      <ul>
+        <li>Hiking through forest trails and nature preserves</li>
+        <li>Photography sessions that capture moody light and color</li>
+        <li>Experimenting with new recipes in the kitchen</li>
+        <li>Reading sci-fi and design books with a cup of tea</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
